@@ -1,3 +1,5 @@
+##### LINUX
+
 curl -fsSL https://get.docker.com -o get-docker.sh
 yum install docker -y
 systemctl status docker
@@ -19,7 +21,7 @@ testar aplicação web http://ip_publico
 create repo ECR private
 user iam permission e cli
 
-#####
+##### LINUX
 push ECR
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 637423622533.dkr.ecr.us-east-1.amazonaws.com
 docker tag project-image:latest 637423622533.dkr.ecr.us-east-1.amazonaws.com/image-container:latest
