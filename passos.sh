@@ -21,7 +21,8 @@ user iam permission e cli
 
 #####
 push ECR
-
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 637423622533.dkr.ecr.us-east-1.amazonaws.com
+docker tag project-image:latest 637423622533.dkr.ecr.us-east-1.amazonaws.com/image-container:latest
 
 aws configure
 docker images
