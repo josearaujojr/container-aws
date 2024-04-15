@@ -1,6 +1,8 @@
-FROM debian:latest
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install nginx -y
-CMD ["nginx", "-g", "daemon off;"]
-COPY index.html /var/www/html/
+FROM php:7.4-apache
+RUN apt-get update && \
+    apt-get install -y libpng-dev && \
+    docker-php-ext-install pdo pdo_mysql gd
+COPY index.php /var/www/html/
+COPY get-index-meta-data.php /var/www/html/
 EXPOSE 80
+CMD ["apache2-foreground"]

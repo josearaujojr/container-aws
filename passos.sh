@@ -22,9 +22,16 @@ create repo ECR private
 user iam permission e cli
 
 ##### LINUX
-push ECR
+
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 637423622533.dkr.ecr.us-east-1.amazonaws.com
 docker tag project-image:latest 637423622533.dkr.ecr.us-east-1.amazonaws.com/image-container:latest
+docker images
+docker push 637423622533.dkr.ecr.us-east-1.amazonaws.com/image-container:latest
+
+##### AWS
+
+Criar Load Balancer Application
+
 
 aws configure
 docker images
