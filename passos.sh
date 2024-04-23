@@ -7,7 +7,7 @@ systemctl start docker
 
 mkdir project
 vim Dockerfile
-vim index.html
+vim index.php
 
 docker build -t project-image .
 docker images
