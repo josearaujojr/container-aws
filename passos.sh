@@ -8,6 +8,7 @@ systemctl start docker
 mkdir project
 vim Dockerfile
 vim index.php
+vim get-index-meta-data.php
 
 docker build -t project-image .
 docker images
@@ -31,7 +32,8 @@ docker push 637423622533.dkr.ecr.us-east-1.amazonaws.com/image-container:latest
 ##### AWS
 
 Criar Load Balancer Application
-
+Criar Cluster ECS com AS
+Criar Task definitions
 
 aws configure
 docker images
