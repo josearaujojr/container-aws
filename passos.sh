@@ -20,6 +20,9 @@ testar aplicação web http://ip_publico
 ##### AWS
 
 create repo ECR private
+aws ecr create-repository --repository-name webapp
+eval $(aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <AccountID from FMI>.dkr.ecr.us-east-1.amazonaws.com) 2> /dev/null
+
 user iam permission e cli
 
 ##### LINUX
